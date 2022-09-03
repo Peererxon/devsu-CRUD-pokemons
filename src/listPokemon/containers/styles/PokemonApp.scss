@@ -1,0 +1,39 @@
+@import "../../../App.scss";
+.search {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    position: relative;
+    margin-bottom: 30px;
+    i {
+      position: absolute;
+      left: 5px;
+      top: 3px;
+    }
+    input {
+      padding-left: 25px;
+    }
+  }
+
+  &__button {
+    color: white;
+    height: 50px;
+    align-self: flex-end;
+    background-color: $primary;
+    border-radius: 5px;
+    width: 120px;
+    font-size: 15px;
+    i {
+      font-size: 20px;
+    }
+  }
+}
