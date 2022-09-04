@@ -1,0 +1,59 @@
+.pokeForm {
+  margin-top: 20px;
+  outline: 2px solid lightgray;
+  padding-bottom: 20px;
+  &__title {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 25px 0 25px 0;
+  }
+}
+
+.pokeinput__input {
+  &:focus,
+  :focus-within {
+    outline: 1.5px solid red;
+    border: 1.5px solid red;
+  }
+}
+
+.inputs {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.pokeinput {
+  width: 60%;
+  margin-bottom: 25px;
+  &__label {
+    width: 75px;
+  }
+  &__input {
+    height: 40px;
+    max-width: 250px;
+    border-radius: 5px;
+    width: calc(100% - 75px);
+  }
+
+  &__range {
+    accent-color: var(--bs-primary);
+    width: calc(80% - 150px);
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button:nth-child(1) {
+  margin-right: 10px;
+}

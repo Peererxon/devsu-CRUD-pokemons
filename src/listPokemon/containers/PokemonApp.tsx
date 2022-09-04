@@ -1,4 +1,5 @@
-import { PokemonList } from "./PokemonList";
+import { PokemonForm } from "../components/PokemonForm";
+import { PokemonList } from "../components/PokemonList";
 import "./styles/PokemonApp.scss";
 export const PokemonApp = () => {
   return (
@@ -11,11 +12,13 @@ export const PokemonApp = () => {
             <input type="search" placeholder="Buscar" />
           </div>
         </div>
-        <button type="button" className="search__button">
-          <i className="bi bi-plus-lg"></i> Nuevo
+        <button type="button" className="button button--primary">
+          <i className="bi bi-plus-lg"></i>
+          Nuevo
         </button>
       </div>
       <PokemonList />
+      <PokemonForm />
     </>
   );
 };

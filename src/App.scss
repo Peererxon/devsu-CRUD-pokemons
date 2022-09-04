@@ -1,3 +1,8 @@
 $primary: #6758f3;
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.scss";
+@import "./global/styles/buttons";
+.App {
+  width: 90%;
+  margin: auto;
+}

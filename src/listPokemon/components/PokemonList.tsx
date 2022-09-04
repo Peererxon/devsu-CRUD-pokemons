@@ -12,12 +12,12 @@ export const PokemonList = () => {
       </thead>
       <tbody contentEditable={"true"}>
         <tr>
-          <th scope="row">pedro?</th>
-          <td>Mark</td>
+          <td>Robert</td>
+          <td>.</td>
           <td>
-            <img src="" alt="" />.
+            <img src="" alt="" />
+            60
           </td>
-          <td>60</td>
           <td>80</td>
           <td colSpan={2} contentEditable={"false"}>
             <span>
