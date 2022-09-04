@@ -1,5 +1,12 @@
 import "./styles/PokemonForm.scss";
-export const PokemonForm = () => {
+
+interface Props {
+  showForm: (formStatus: boolean) => void;
+}
+export const PokemonForm = ({ showForm }: Props) => {
+  const handleCloseForm = () => {
+    showForm(false);
+  };
   return (
     <div className="pokeForm">
       <span className="pokeForm__title">Nuevo Pokemon</span>
@@ -72,7 +79,7 @@ export const PokemonForm = () => {
           Guardar
         </button>
 
-        <button className="button button--primary">
+        <button className="button button--primary" onClick={handleCloseForm}>
           <i className="bi bi-x-lg"></i>
           Cancelar
         </button>
