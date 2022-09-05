@@ -57,3 +57,7 @@
 .button:nth-child(1) {
   margin-right: 10px;
 }
+
+.button[disabled] {
+  opacity: 0.5;
+}

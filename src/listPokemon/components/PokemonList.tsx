@@ -1,4 +1,19 @@
-export const PokemonList = () => {
+import { Pokemon } from "../../global/interfaces";
+import "./styles/PokemonList.scss";
+interface Props {
+  pokemons: Pokemon[];
+  selectPokemon: (pokemon: Pokemon) => void;
+  deletePokemon: (pokemon: Pokemon) => void;
+}
+
+export const PokemonList = ({
+  pokemons,
+  selectPokemon,
+  deletePokemon,
+}: Props) => {
+  const handleClick = (pokemon: Pokemon) => {
+    selectPokemon(pokemon);
+  };
   return (
     <table className="table table-bordered">
       <thead>
@@ -10,8 +25,41 @@ export const PokemonList = () => {
           <th scope="col">Acciones</th>
         </tr>
       </thead>
-      <tbody contentEditable={"true"}>
-        <tr>
+      <tbody>
+        {pokemons.map(
+          ({ name, id, defense, attack, image, id_author }, index) => (
+            <tr key={id}>
+              <td>{name}</td>
+              <td className="pokemonimage">
+                <img
+                  src={image}
+                  alt="pokemon"
+                  title="image of a pokemon"
+                  width={40}
+                />
+              </td>
+              <td>{attack}</td>
+              <td>{defense}</td>
+              <td colSpan={2}>
+                <button
+                  className="editButton"
+                  onClick={() => handleClick(pokemons[index])}
+                >
+                  <i className="bi bi-pencil"></i>
+                  editar
+                </button>
+                <button
+                  className="editButton"
+                  onClick={() => deletePokemon(pokemons[index])}
+                >
+                  <i className="bi bi-trash3-fill"></i>
+                  borrar
+                </button>
+              </td>
+            </tr>
+          )
+        )}
+        {/*         <tr>
           <td>Robert</td>
           <td>.</td>
           <td>
@@ -27,7 +75,7 @@ export const PokemonList = () => {
               <i></i>borrar
             </span>
           </td>
-        </tr>
+        </tr> */}
       </tbody>
     </table>
   );
