@@ -39,7 +39,6 @@ export const PokemonForm = ({
       attack: parseInt(data.attack),
       defense: parseInt(data.defense),
     };
-    console.log(pokemon);
     if (pokemonSelected) {
       updatePokemon(pokemon);
       return;
