@@ -59,23 +59,6 @@ export const PokemonList = ({
             </tr>
           )
         )}
-        {/*         <tr>
-          <td>Robert</td>
-          <td>.</td>
-          <td>
-            <img src="" alt="" />
-            60
-          </td>
-          <td>80</td>
-          <td colSpan={2} contentEditable={"false"}>
-            <span>
-              <i></i>editar
-            </span>
-            <span>
-              <i></i>borrar
-            </span>
-          </td>
-        </tr> */}
       </tbody>
     </table>
   );
